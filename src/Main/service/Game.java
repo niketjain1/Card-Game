@@ -44,22 +44,28 @@ public class Game {
                     if (currentPlayerIndex >= players.size()) {
                         currentPlayerIndex -= players.size();
                         changedIndex = 1;
+                        System.out.println("Next player turn skipped!!");
                     } else if (currentPlayerIndex < 0) {
                         currentPlayerIndex += players.size();
                         changedIndex = 1;
+                        System.out.println("Next player turn skipped!!");
                     } else {
                         changedIndex = 1;
+                        System.out.println("Next player turn skipped!!");
                     }
                 } else if (chosenCard.getRank() == Rank.KING) {
                     direction *= -1;
+                    System.out.println("Turn reversed!!");
                 } else if (chosenCard.getRank() == Rank.QUEEN) {
                     nextPlayer().addCardToHand(deckService.drawCard());
                     nextPlayer().addCardToHand(deckService.drawCard());
+                    System.out.println("2 cards added to the next player hand");
                 } else if (chosenCard.getRank() == Rank.JACK) {
                     nextPlayer().addCardToHand(deckService.drawCard());
                     nextPlayer().addCardToHand(deckService.drawCard());
                     nextPlayer().addCardToHand(deckService.drawCard());
                     nextPlayer().addCardToHand(deckService.drawCard());
+                    System.out.println("2 cards added to the next player hand");
                 }
             }
                 else {
@@ -68,7 +74,7 @@ public class Game {
 
             }else {
             currentPlayer.addCardToHand(deckService.drawCard());
-            System.out.println("Invalid index");
+            System.out.println("Invalid index, one card drawn !");
         }
         if(changedIndex != 1) {
             currentPlayerIndex = (currentPlayerIndex + direction + players.size()) % players.size();

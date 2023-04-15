@@ -28,7 +28,7 @@ public class Main {
             System.out.println("Top card: " + game.getDiscardPile().peek());
             System.out.print("Your hand: ");
             for(int i = 0; i < currentPlayer.getHand().size();){
-                System.out.print("(" +currentPlayer.getHand().get(i) + ","+ ++i + ") ");
+                System.out.print("(" +currentPlayer.getHand().get(i) + ", "+ ++i + ") ");
             }
             System.out.println();
 
