@@ -1,14 +1,15 @@
-package entities;
+package Main.entities;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
     private final String playerName;
     private final List<Card> hand;
 
-    public Player(String playerName, List<Card> hand) {
+    public Player(String playerName) {
         this.playerName = playerName;
-        this.hand = hand;
+        this.hand = new ArrayList<>();
     }
 
     public String getPlayerName() {
@@ -19,8 +20,11 @@ public class Player {
         return hand;
     }
 
-    public Card getCard(int index){
-        return hand.get(index);
+    public void addCard(Card card){
+        hand.add(card);
     }
+   public Card removeCard(int index){
+        return hand.remove(index);
+   }
 
 }

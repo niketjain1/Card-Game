@@ -1,7 +1,7 @@
-package entities;
+package Main.entities;
 
-import constant.Rank;
-import constant.Suit;
+import Main.constant.Rank;
+import Main.constant.Suit;
 
 public class Card {
     private final Suit suit;

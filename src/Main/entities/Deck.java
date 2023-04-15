@@ -1,7 +1,7 @@
-package entities;
+package Main.entities;
 
-import constant.Rank;
-import constant.Suit;
+import Main.constant.Rank;
+import Main.constant.Suit;
 
 import java.util.ArrayList;
 import java.util.List;

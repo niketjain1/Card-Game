@@ -1,7 +1,7 @@
-package service;
+package Main.service;
 
-import entities.Card;
-import entities.Deck;
+import Main.entities.Card;
+import Main.entities.Deck;
 
 import java.util.Collections;
 

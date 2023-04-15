@@ -1,4 +1,4 @@
-package constant;
+package Main.constant;
 
 public enum Suit {
     CLUBS,
