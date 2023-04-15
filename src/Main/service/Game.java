@@ -18,6 +18,7 @@ public class Game {
     public int currentPlayerIndex;
     public DeckService deckService;
 
+    private int changedIndex = 0;
     public Game(List<Player> players) {
         this.players = players;
         deck = new Deck();
@@ -40,6 +41,15 @@ public class Game {
                 discardPile.push(chosenCard);
                 if (chosenCard.getRank() == Rank.ACE) {
                     currentPlayerIndex += 2 * direction;
+                    if (currentPlayerIndex >= players.size()) {
+                        currentPlayerIndex -= players.size();
+                        changedIndex = 1;
+                    } else if (currentPlayerIndex < 0) {
+                        currentPlayerIndex += players.size();
+                        changedIndex = 1;
+                    } else {
+                        changedIndex = 1;
+                    }
                 } else if (chosenCard.getRank() == Rank.KING) {
                     direction *= -1;
                 } else if (chosenCard.getRank() == Rank.QUEEN) {
@@ -58,9 +68,13 @@ public class Game {
 
             }else {
             currentPlayer.addCardToHand(deckService.drawCard());
+            System.out.println("Invalid index");
         }
-        currentPlayerIndex = (currentPlayerIndex + direction + players.size()) % players.size();;
-
+        if(changedIndex != 1) {
+            currentPlayerIndex = (currentPlayerIndex + direction + players.size()) % players.size();
+        }else{
+            changedIndex = 0;
+        }
     }
 
     public Player nextPlayer() {

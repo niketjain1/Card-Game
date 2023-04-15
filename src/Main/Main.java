@@ -26,7 +26,12 @@ public class Main {
             Player currentPlayer = game.getPlayers().get(game.currentPlayerIndex);
             System.out.println(currentPlayer.getPlayerName() + "'s turn");
             System.out.println("Top card: " + game.getDiscardPile().peek());
-            System.out.println("Your hand: " + currentPlayer.getHand());
+            System.out.print("Your hand: ");
+            for(int i = 0; i < currentPlayer.getHand().size();){
+                System.out.print("(" +currentPlayer.getHand().get(i) + ","+ ++i + ") ");
+            }
+            System.out.println();
+
             System.out.println("Enter the index of the card you want to play, or -1 to draw a card:");
             int cardIndex = scanner.nextInt();
             Card chosenCard = null;
@@ -43,7 +48,7 @@ public class Main {
 //                System.out.println("Invalid input. Please try again.");
 //            }
 
-                chosenCard = currentPlayer.getHand().get(cardIndex);
+                chosenCard = currentPlayer.getHand().get(cardIndex - 1);
 
             }
             game.nextTurn(chosenCard);
