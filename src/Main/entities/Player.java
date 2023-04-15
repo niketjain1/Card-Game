@@ -20,11 +20,14 @@ public class Player {
         return hand;
     }
 
-    public void addCard(Card card){
+    public void addCardToHand(Card card){
         hand.add(card);
     }
-   public Card removeCard(int index){
-        return hand.remove(index);
-   }
-
+    public boolean playCard(Card card, Card topCard) {
+        if (card.getSuit() == topCard.getSuit() || card.getRank() == topCard.getRank()) {
+            hand.remove(card);
+            return true;
+        }
+        return false;
+    }
 }

@@ -7,12 +7,21 @@ import java.util.Collections;
 
 public class DeckService {
 
+    private final Deck deck;
+
+    public DeckService(Deck deck) {
+        this.deck = deck;
+    }
+
     public void shuffle(Deck deck){
         Collections.shuffle(deck.getCards());
     }
 
-    public Card drawCard(Deck deck){
-        return deck.getCards().remove(0);
+    public Card drawCard(){
+        if (deck.getCards().isEmpty()) {
+            throw new IllegalStateException("Deck is empty");
+        }
+        return deck.getCards().pop();
     }
 
     public int size(Deck deck){
