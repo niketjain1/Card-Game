@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9e050a49-7e3e-43a6-a353-4c0fc2fb32d2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/card_game/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/card_game/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/entities/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/entities/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/card_game/Main/service/DeckService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/card_game/Main/service/DeckService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/card_game/Test/entities/DeckTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/card_game/Test/entities/DeckTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/card_game/Test/service/DeckServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/card_game/Test/service/DeckServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/service/DeckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/service/DeckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/entities/DeckTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/entities/DeckTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/service/DeckServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/service/DeckServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/service/PlayerServiceTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,21 +55,8 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.PlayerTest.testPlayCard">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main.Main" />
-      <module name="card_game" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeckServiceTest.testShuffle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DeckServiceTest.testSize">
+    <configuration name="DeckServiceTest.testDrawCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="card_game" />
       <extension name="coverage">
         <pattern>
@@ -74,13 +66,61 @@
       </extension>
       <option name="PACKAGE_NAME" value="Test.service" />
       <option name="MAIN_CLASS_NAME" value="Test.service.DeckServiceTest" />
-      <option name="METHOD_NAME" value="testShuffle" />
+      <option name="METHOD_NAME" value="testDrawCard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest.testAddCardAndGetHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DeckServiceTest.testDrawCardEmptyDeck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="card_game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.service" />
+      <option name="MAIN_CLASS_NAME" value="Test.service.DeckServiceTest" />
+      <option name="METHOD_NAME" value="testDrawCardEmptyDeck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckServiceTest.testEmptyDeck" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="card_game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.service" />
+      <option name="MAIN_CLASS_NAME" value="Test.service.DeckServiceTest" />
+      <option name="METHOD_NAME" value="testEmptyDeck" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckServiceTest.testSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="card_game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.service" />
+      <option name="MAIN_CLASS_NAME" value="Test.service.DeckServiceTest" />
+      <option name="METHOD_NAME" value="testSize" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckTest.testDeckShuffle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="card_game" />
       <extension name="coverage">
         <pattern>
@@ -89,40 +129,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Test.entities" />
-      <option name="MAIN_CLASS_NAME" value="Test.entities.PlayerTest" />
-      <option name="METHOD_NAME" value="testAddCardAndGetHand" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerTest.testGetName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="card_game" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.entities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test.entities" />
-      <option name="MAIN_CLASS_NAME" value="Test.entities.PlayerTest" />
-      <option name="METHOD_NAME" value="testGetName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerTest.testPlayCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="card_game" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.entities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test.entities" />
-      <option name="MAIN_CLASS_NAME" value="Test.entities.PlayerTest" />
-      <option name="METHOD_NAME" value="testPlayCard" />
+      <option name="MAIN_CLASS_NAME" value="Test.entities.DeckTest" />
+      <option name="METHOD_NAME" value="testDeckShuffle" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlayerTest.testPlayCard" />
-        <item itemvalue="JUnit.PlayerTest.testGetName" />
-        <item itemvalue="JUnit.PlayerTest.testAddCardAndGetHand" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.DeckServiceTest.testShuffle" />
+        <item itemvalue="JUnit.DeckServiceTest.testSize" />
+        <item itemvalue="JUnit.DeckServiceTest.testEmptyDeck" />
+        <item itemvalue="JUnit.DeckServiceTest.testDrawCardEmptyDeck" />
+        <item itemvalue="JUnit.DeckServiceTest.testDrawCard" />
+        <item itemvalue="JUnit.DeckTest.testDeckShuffle" />
       </list>
     </recent_temporary>
   </component>

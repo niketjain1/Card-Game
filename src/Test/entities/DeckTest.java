@@ -13,4 +13,10 @@ public class DeckTest {
         assertEquals(52, deck.getCards().size());
     }
 
+    @Test
+    public void testDeckShuffle() {
+        Deck deck1 = new Deck();
+        Deck deck2 = new Deck();
+        assertNotEquals(deck1.getCards(), deck2.getCards());
+    }
 }

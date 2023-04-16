@@ -13,9 +13,9 @@ public class DeckService {
         this.deck = deck;
     }
 
-    public void shuffle(Deck deck){
-        Collections.shuffle(deck.getCards());
-    }
+//    public void shuffle(Deck deck){
+//        Collections.shuffle(deck.getCards());
+//    }
 
     public Card drawCard(){
         if (deck.getCards().isEmpty()) {
