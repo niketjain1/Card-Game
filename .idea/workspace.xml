@@ -7,9 +7,7 @@
     <list default="true" id="9e050a49-7e3e-43a6-a353-4c0fc2fb32d2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/card_game/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/card_game/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/card_game/Main/service/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/card_game/Main/service/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/service/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/service/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/entities/PlayerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/entities/PlayerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.PlayerTest.testPlayCard">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
       <module name="card_game" />
@@ -82,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeckTest.testGetCards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest.testAddCardAndGetHand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="card_game" />
       <extension name="coverage">
         <pattern>
@@ -91,40 +89,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Test.entities" />
-      <option name="MAIN_CLASS_NAME" value="Test.entities.DeckTest" />
-      <option name="METHOD_NAME" value="testGetCards" />
+      <option name="MAIN_CLASS_NAME" value="Test.entities.PlayerTest" />
+      <option name="METHOD_NAME" value="testAddCardAndGetHand" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerServiceTest.testAddCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest.testGetName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="card_game" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.service.*" />
+          <option name="PATTERN" value="Test.entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Test.service" />
-      <option name="MAIN_CLASS_NAME" value="Test.service.PlayerServiceTest" />
-      <option name="METHOD_NAME" value="testAddCard" />
+      <option name="PACKAGE_NAME" value="Test.entities" />
+      <option name="MAIN_CLASS_NAME" value="Test.entities.PlayerTest" />
+      <option name="METHOD_NAME" value="testGetName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerServiceTest.testRemoveCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayerTest.testPlayCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="card_game" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.service.*" />
+          <option name="PATTERN" value="Test.entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Test.service" />
-      <option name="MAIN_CLASS_NAME" value="Test.service.PlayerServiceTest" />
-      <option name="METHOD_NAME" value="testRemoveCard" />
+      <option name="PACKAGE_NAME" value="Test.entities" />
+      <option name="MAIN_CLASS_NAME" value="Test.entities.PlayerTest" />
+      <option name="METHOD_NAME" value="testPlayCard" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlayerTest.testPlayCard" />
+        <item itemvalue="JUnit.PlayerTest.testGetName" />
+        <item itemvalue="JUnit.PlayerTest.testAddCardAndGetHand" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DeckServiceTest.testShuffle" />
-        <item itemvalue="JUnit.DeckTest.testGetCards" />
-        <item itemvalue="JUnit.PlayerServiceTest.testRemoveCard" />
-        <item itemvalue="JUnit.PlayerServiceTest.testAddCard" />
       </list>
     </recent_temporary>
   </component>
