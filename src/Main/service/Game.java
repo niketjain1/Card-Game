@@ -17,7 +17,7 @@ public class Game {
     private int direction;
     public int currentPlayerIndex;
     public DeckService deckService;
-
+    private Card lastActionCard = null;
     private int changedIndex = 0;
     public Game(List<Player> players) {
         this.players = players;
@@ -40,6 +40,7 @@ public class Game {
             if (currentPlayer.playCard(chosenCard, topCard)) {
                 discardPile.push(chosenCard);
                 if (chosenCard.getRank() == Rank.ACE) {
+                    lastActionCard = chosenCard;
                     currentPlayerIndex += 2 * direction;
                     if (currentPlayerIndex >= players.size()) {
                         currentPlayerIndex -= players.size();
@@ -54,25 +55,42 @@ public class Game {
                         System.out.println("Next player turn skipped!!");
                     }
                 } else if (chosenCard.getRank() == Rank.KING) {
+                    lastActionCard = chosenCard;
                     direction *= -1;
                     System.out.println("Turn reversed!!");
-                } else if (chosenCard.getRank() == Rank.QUEEN) {
-                    nextPlayer().addCardToHand(deckService.drawCard());
-                    nextPlayer().addCardToHand(deckService.drawCard());
-                    System.out.println("2 cards added to the next player hand");
+                } else if (chosenCard.getRank() == Rank.QUEEN ) {
+                    if (lastActionCard != null && lastActionCard.getRank() == Rank.QUEEN) {
+                        currentPlayer.addCardToHand(deckService.drawCard());
+                        System.out.println("Cannot play another Queen, one card drawn!");
+                    } else {
+                        lastActionCard = chosenCard;
+                        nextPlayer().addCardToHand(deckService.drawCard());
+                        nextPlayer().addCardToHand(deckService.drawCard());
+                        System.out.println("2 cards added to the next player hand");
+                    }
                 } else if (chosenCard.getRank() == Rank.JACK) {
-                    nextPlayer().addCardToHand(deckService.drawCard());
-                    nextPlayer().addCardToHand(deckService.drawCard());
-                    nextPlayer().addCardToHand(deckService.drawCard());
-                    nextPlayer().addCardToHand(deckService.drawCard());
-                    System.out.println("2 cards added to the next player hand");
+                    if (lastActionCard != null && lastActionCard.getRank() == Rank.JACK) {
+                        currentPlayer.addCardToHand(deckService.drawCard());
+                        System.out.println("Cannot play another Jack, one card drawn !");
+                    } else {
+                        lastActionCard = chosenCard;
+                        nextPlayer().addCardToHand(deckService.drawCard());
+                        nextPlayer().addCardToHand(deckService.drawCard());
+                        nextPlayer().addCardToHand(deckService.drawCard());
+                        nextPlayer().addCardToHand(deckService.drawCard());
+                        System.out.println("4 cards added to the next player hand");
+                    }
+                } else {
+                    lastActionCard = null;
                 }
             }
                 else {
+                    lastActionCard = null;
                     System.out.println("Invalid move. You must play a card that matches the suit or rank of the top card.");
                 }
 
             }else {
+            lastActionCard = null;
             currentPlayer.addCardToHand(deckService.drawCard());
             System.out.println("Invalid index, one card drawn !");
         }

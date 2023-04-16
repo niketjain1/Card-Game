@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -35,23 +36,12 @@ public class Main {
             System.out.println("Enter the index of the card you want to play, or -1 to draw a card:");
             int cardIndex = scanner.nextInt();
             Card chosenCard = null;
-            if (cardIndex >= 0 && cardIndex < currentPlayer.getHand().size()) {
-//                Card card = currentPlayer.getHand().get(cardIndex);
-//                if (!currentPlayer.playCard(card, game.getDiscardPile().peek())) {
-//                    System.out.println("Invalid move. You must play a card that matches the suit or rank of the top card.");
-//                } else {
-//                    game.discardPile.push(card);
-//                }
-//            } else if (cardIndex == -1) {
-//                currentPlayer.addCardToHand(game.deckService.drawCard());
-//            } else {
-//                System.out.println("Invalid input. Please try again.");
-//            }
-
+            if (cardIndex >= 1 && cardIndex <= currentPlayer.getHand().size()) {
                 chosenCard = currentPlayer.getHand().get(cardIndex - 1);
 
             }
             game.nextTurn(chosenCard);
+            System.out.println();
         }
         Player winner = game.getWinner();
         if (winner != null) {
