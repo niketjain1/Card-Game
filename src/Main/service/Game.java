@@ -69,16 +69,14 @@ public class Game {
                     currentPlayerIndex += 2 * direction;
                     if (currentPlayerIndex >= players.size()) {
                         currentPlayerIndex -= players.size();
-                        changedIndex = 1;
                         System.out.println("Next player turn skipped!!");
                     } else if (currentPlayerIndex < 0) {
                         currentPlayerIndex += players.size();
-                        changedIndex = 1;
                         System.out.println("Next player turn skipped!!");
                     } else {
-                        changedIndex = 1;
                         System.out.println("Next player turn skipped!!");
                     }
+                    changedIndex = 1;
                 } else if (chosenCard.getRank() == Rank.KING) {
                     lastActionCard = chosenCard;
                     direction *= -1;
@@ -112,6 +110,7 @@ public class Game {
                 else {
                     lastActionCard = null;
                     System.out.println("Invalid move. You must play a card that matches the suit or rank of the top card. One card drawn!");
+                    currentPlayer.addCardToHand(deckService.drawCard());
                 }
 
             }else {
