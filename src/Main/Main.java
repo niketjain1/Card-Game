@@ -24,7 +24,7 @@ public class Main {
         }
         Game game = new Game(players);
         while (!game.isGameOver()) {
-            Player currentPlayer = game.getPlayers().get(game.currentPlayerIndex);
+            Player currentPlayer = game.getPlayers().get(game.getCurrentPlayerIndex());
             System.out.println(currentPlayer.getPlayerName() + "'s turn");
             System.out.println("Top card: " + game.getDiscardPile().peek());
             System.out.print("Your hand: ");
